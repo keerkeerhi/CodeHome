@@ -1,0 +1,49 @@
+@import "assets/css/style";
+@import "assets/font/iconfont.css";
+@import "assets/css/sass-base";
+
+#app {
+  font-family: 微软雅黑;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $base_black;
+  height: 90%;
+  margin-top: 48px;
+}
+
+.rootDiv {
+  background: #fff;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  z-index: 800;
+  color: #A7A7A7;
+  background: $base_black;
+}
+
+#header .logo {
+  margin: 4px 0 0 3.2rem;
+  height: 40px;
+  cursor: pointer;
+}
+
+.addShadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.footer {
+  background: $base_black;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
