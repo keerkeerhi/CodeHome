@@ -1,0 +1,29 @@
+.circleinput{
+  border: solid 1px #CCC;
+  border-radius: 15px;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0
+}
+
+.global_shadow{
+  box-shadow: 0 0 4px rgba(255,224,0,.2);
+}
+.circleDiv {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circleDiv > img {
+  width: 100%;
+  height: auto;
+}
+
+.gray-font{
+  color: #6B6B6B;
+}
