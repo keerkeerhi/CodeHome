@@ -8,12 +8,11 @@
         <!-- 一条线 -->
         <path id="wordPath" d="M 0 75 A 75 75 180 1 0 150 75"/>
       </defs>
-
-        <text font-family="Verdana" font-size="20">
-          <textPath xlink:href="#wordPath">
-            We go up, then we go down, then up again
-          </textPath>
-        </text>
+      <text font-family="Verdana" font-size="20">
+        <textPath xlink:href="#wordPath">
+          2018.12.31
+        </textPath>
+      </text>
     </svg>
   </div>
 </template>

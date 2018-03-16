@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      html,body{
+        margin: 0;
+        padding: 0;
+      }
+      svg{
+        background: url("../assets/initialBolo.png") no-repeat center;
+        background-size: 100%;
+      }
+    </style>
+</head>
+<body>
+  <svg width="85" height="85" xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <!-- 圆弧 M 50 120 A 60 60 180 1 0 22 95-->
+      <path id="wordPath" d="M 26 69 A 30 30 180 0 0 72 50" />
+      <!--<path id="wordPath" d="M 50 50 L 200 50" />-->
+    </defs>
+    <!--<line x1="50" y1="50" x2="50" y2="100" stroke="red" />-->
+    <!--<text font-size="20">-->
+    <!--杨凯文-->
+    <!--</text>-->
+    <text font-family="Verdana" font-size="10">
+      <textPath xlink:href="#wordPath">
+        2018.03.10
+      </textPath>
+    </text>
+  </svg>
+</body>
+</html>
