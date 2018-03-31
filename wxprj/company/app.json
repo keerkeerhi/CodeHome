@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "identifyImg",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icon/crown1.png",
+        "selectedIconPath": "assets/icon/crown2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "结果",
+        "iconPath": "assets/icon/result1.png",
+        "selectedIconPath": "assets/icon/result2.png"
+      }
+    ]
+  }
+}

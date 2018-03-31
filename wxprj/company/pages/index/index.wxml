@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+    <image mode='aspectFit' src='{{imgSrc}}' />
+  </view>
+  <view class="usermotto">
+    <button bindtap='chooseImg'>
+      上传并识别图片
+    </button>
+  </view>
+</view>
