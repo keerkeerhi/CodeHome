@@ -2,8 +2,14 @@
   <div id="app">
     <ul>
       <router-link to="/Home" tag="li" >Home</router-link>
+      <router-link to="/Demo1" tag="li" >
+        Demo1
+      </router-link>
+      <router-link to="/" tag="li" >
+        Home
+      </router-link>
     </ul>
-    <router-view />
+    <router-view style="background: #F3F3F3;" />
   </div>
 </template>
 
