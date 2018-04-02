@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <ul>
+      <router-link to="/Home" tag="li" >Home</router-link>
+    </ul>
     <router-view />
   </div>
 </template>
@@ -17,6 +20,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height:100%;
 }
+  ul{
+    list-style: none;
+    height: 40px;
+    line-height:40px;
+  }
+  ul>li{
+    cursor: pointer;
+    width: 200px;
+    float: left;
+  }
+  html,body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+  }
 </style>
