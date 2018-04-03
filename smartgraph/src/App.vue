@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <ul>
+      <router-link to="/Home" tag="li" >Home</router-link>
       <router-link to="/Demo1" tag="li" >
         Demo1
       </router-link>
@@ -25,17 +26,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height:100%;
 }
-ul{
-  display: inline-block;
-  list-style: none;
-  margin-bottom: 20px;
-}
+  ul{
+    list-style: none;
+    height: 40px;
+    line-height:40px;
+  }
   ul>li{
-    float: left;
     cursor: pointer;
-    background: green;
-    margin: 10px;
+    width: 200px;
+    float: left;
+  }
+  html,body{
+    margin:0;
+    padding: 0;
+    height: 100%;
   }
 </style>
