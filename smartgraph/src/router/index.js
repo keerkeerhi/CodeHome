@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '../components/Home.vue'
 import Demo1 from '@/components/Demo1'
+import scroll from '@/components/Scroll'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/Demo1',
       name: 'Demo1',
       component: Demo1
+    },
+    {
+      path: '/scroll',
+      name: 'scroll',
+      component: scroll
     }
   ]
 })

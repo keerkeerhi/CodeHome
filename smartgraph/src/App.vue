@@ -8,6 +8,9 @@
       <router-link to="/" tag="li" >
         Home
       </router-link>
+      <router-link to="/scroll" tag="li" >
+        Scroll
+      </router-link>
     </ul>
     <router-view style="background: #F3F3F3;" />
   </div>
