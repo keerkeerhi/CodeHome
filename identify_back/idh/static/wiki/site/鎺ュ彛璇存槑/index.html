@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>接口说明 - IDH WIKI</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u63a5\u53e3\u8bf4\u660e";
+    var mkdocs_page_input_path = "\u63a5\u53e3\u8bf4\u660e.md";
+    var mkdocs_page_url = "/\u63a5\u53e3\u8bf4\u660e/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> IDH WIKI</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">项目概况</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">接口说明</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">用户登录</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">更新用户信息</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_3">查询积分</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_4">每日签到</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_5">获取邀请码</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_6">获取邀请记录</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_7">获取积分记录</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_8">微信运动授权</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_9">查询认证状态</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_10">手机认证</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_11">查询签到状态</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_12">上传文件</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_13">眼底片提交审核</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_14">积分排行榜</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">IDH WIKI</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>接口说明</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><strong>接口说明</strong></p>
+<p>​   主要对相关使用接口做说明。</p>
+<p><strong>目录</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#_1">用户登录</a></li>
+<li><a href="#_2">更新用户信息</a></li>
+<li><a href="#_3">查询积分</a></li>
+<li><a href="#_4">每日签到</a></li>
+<li><a href="#_5">获取邀请码</a></li>
+<li><a href="#_6">获取邀请记录</a></li>
+<li><a href="#_7">获取积分记录</a></li>
+<li><a href="#_8">微信运动授权</a></li>
+<li><a href="#_9">查询认证状态</a></li>
+<li><a href="#_10">手机认证</a></li>
+<li><a href="#_11">查询签到状态</a></li>
+<li><a href="#_12">上传文件</a></li>
+<li><a href="#_13">眼底片提交审核</a></li>
+<li><a href="#_14">积分排行榜</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="_1">用户登录</h2>
+<p>接口用途</p>
+<blockquote>
+<p>用来在小程序登录时执行用户登录操作，获取用户openID和session_key。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/login/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP   GET</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>字段说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>登录凭证，通过微信wx.login获得，<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html#wxloginobject">微信文档</a></td>
+</tr>
+<tr>
+<td>invite</td>
+<td>邀请人的邀请码，非必选</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码，详见返回码说明</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>详细信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式字典，key说明：openid表示用户微信唯一标识，is_new表示用户是否是新创建的用户，True表示新用户，False表示老用户</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>系统没有配置微信</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>获取openID失败</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>创建用户失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_2">更新用户信息</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来更新用户基本信息，包括：昵称、头像、性别、国家、语言等。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/update/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  POST</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>用户微信唯一标识OpenID</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>sex</td>
+<td>性别，按照微信的说明，0标识未知，1标识男，2表示女</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>头像地址</td>
+</tr>
+<tr>
+<td>country</td>
+<td>国家</td>
+</tr>
+<tr>
+<td>province</td>
+<td>省份</td>
+</tr>
+<tr>
+<td>city</td>
+<td>城市</td>
+</tr>
+<tr>
+<td>language</td>
+<td>语言</td>
+</tr>
+<tr>
+<td><strong>iv</strong></td>
+<td><strong>加密算法的初始向量</strong></td>
+</tr>
+<tr>
+<td><strong>encryptedData</strong></td>
+<td><strong>包括敏感数据在内的完整用户信息的加密数据</strong></td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>信息</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数字段不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的性别</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>错误的openID</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>更新失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_3">查询积分</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来查询用户剩余积分，包括当前参与总人数和人均积分。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/query_balance/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  GET</p>
+</blockquote>
+<p>传入参数</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据。数据格式字段，key说明：balance表示用户剩余积分，p_num表示当前参与总人数，avg_balance表示人均积分数</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_4">每日签到</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来用户每日签到。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/sign/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  POST</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>每天只能签到一次</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>错误的openid</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>签到失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_5">获取邀请码</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来获取用户的邀请码。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/query_share_code/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  GET</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式字典，key说明：share_code标识邀请码，times表示当前积分倍数，<strong>y_rank昨日邀请人数排行，n_rank今日邀请人数排行</strong></td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_6">获取邀请记录</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来获取用户的邀请记录。包括分页操作。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/query_share_record/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  GET</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+<tr>
+<td>index</td>
+<td>页码，非必选，默认0</td>
+</tr>
+<tr>
+<td>num</td>
+<td>数量，非必选，默认10</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式列表，列表每个元素是字典，字典key说明：avatar表示头像地址，nickname表示昵称，c_time表示创建时间</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_7">获取积分记录</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来获取用户积分收支记录。包括分页操作。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/query_point_record/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  GET</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+<tr>
+<td>index</td>
+<td>页码，非必选，默认0</td>
+</tr>
+<tr>
+<td>num</td>
+<td>数量，非必选，默认10</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式列表，列表每个元素是字典，字典key说明：name表示任务名称，c_time表示操作时间，point表示获取点数</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_8">微信运动授权</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来对微信运动授权，并获取用户最近30天的微信运动步数，在成功以后，会增加授权任务积分。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/wx_run/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP   POST</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+<tr>
+<td>encryptedData</td>
+<td>加密数据</td>
+</tr>
+<tr>
+<td>iv</td>
+<td>加密向量</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+</tbody>
+</table>
+<p>返回码详情</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数字段不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>微信配置为空</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>错误的session key</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>错误的openid</td>
+</tr>
+<tr>
+<td>-5</td>
+<td>解析失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_9">查询认证状态</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来查询用户各项认证状态，包括：手机认证、实名认证、授权等等。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/auth_status/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  GET</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式字典，key说明：详见key说明。True表示已经完成，False表示没有完成。</td>
+</tr>
+</tbody>
+</table>
+<p>key说明</p>
+<table>
+<thead>
+<tr>
+<th>key值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is_phone</td>
+<td>是否手机认证</td>
+</tr>
+<tr>
+<td>is_email</td>
+<td>是否邮箱认证</td>
+</tr>
+<tr>
+<td>is_real_name</td>
+<td>是否实名认证</td>
+</tr>
+<tr>
+<td>is_face</td>
+<td>是否人脸识别</td>
+</tr>
+<tr>
+<td>is_wx_run</td>
+<td>是否授权微信运动</td>
+</tr>
+<tr>
+<td>is_mp</td>
+<td>表示公众号是否关联</td>
+</tr>
+<tr>
+<td>is_eye</td>
+<td>是否完成眼底片任务上传</td>
+</tr>
+<tr>
+<td>eye_status</td>
+<td>眼底任务状态，success表示已经完成，audit表示审核中，failed表示审核失败，need表示还没有提交审核。<strong>注意：当状态为已完成或审核中，不允许再次提交审核。</strong></td>
+</tr>
+</tbody>
+</table>
+<p>返回码详情</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_10">手机认证</h1>
+<p>接口用途</p>
+<blockquote>
+<p>使用微信wx.getPhoneNumber获取手机号码，并增加积分。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/wx_phone/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  POST</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信唯一标识</td>
+</tr>
+<tr>
+<td>encrypted_data</td>
+<td>加密数据</td>
+</tr>
+<tr>
+<td>iv</td>
+<td>加密向量</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>微信配置不存在</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>仅能认证一次</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>错误的session key</td>
+</tr>
+<tr>
+<td>-5</td>
+<td>错误的openid</td>
+</tr>
+<tr>
+<td>-6</td>
+<td>微信用户没有手机号码</td>
+</tr>
+<tr>
+<td>-7</td>
+<td>解析数据失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_11">查询签到状态</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来查询用户当日是否已经签到。</p>
+</blockquote>
+<p>访问地址</p>
+<blockquote>
+<p>/api/sign_status/</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  GET</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>用户唯一标识</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式字典，key说明：is_sign表示是否已经签到。True表示已经签到，Fasle反之</td>
+</tr>
+</tbody>
+</table>
+<p>返回码详情</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_12">上传文件</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来上传文件，目前支持上传照片类文件。</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP   POST</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/upload/</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>用户微信唯一标识</td>
+</tr>
+<tr>
+<td>image</td>
+<td>小程序文档中，文件对应的key，<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/network-file.html#wxuploadfileobject">文档</a></td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据类型字典，key说明：id表示文件id</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>错误的openid</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>上传文件失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_13">眼底片提交审核</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来提交眼底片审核。</p>
+</blockquote>
+<p>访问方式</p>
+<blockquote>
+<p>HTTP  POST</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/apply_audit/</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>用户微信唯一标识</td>
+</tr>
+<tr>
+<td>files</td>
+<td>上传文件的列表，需要格式化成JSON，如：'[1, 2, 3, 4, 5]'</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>参数不能为空</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>参数不正确</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>不能继续提交，用户已有在审核或审核通过的任务</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>上传文件列表不能为空</td>
+</tr>
+<tr>
+<td>-5</td>
+<td>操作失败</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_14">积分排行榜</h1>
+<p>接口用途</p>
+<blockquote>
+<p>用来获取积分最多的10位用户信息。</p>
+</blockquote>
+<p>接口地址</p>
+<blockquote>
+<p>/api/rank_by_balance/</p>
+</blockquote>
+<p>参数字段</p>
+<table>
+<thead>
+<tr>
+<th>参数字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>微信用户openid</td>
+</tr>
+</tbody>
+</table>
+<p>返回字段</p>
+<table>
+<thead>
+<tr>
+<th>返回字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>返回码</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>返回信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>返回数据，数据格式列表，如：[[排名, 昵称, 头像, 积分],[排名, 昵称, 头像, 积分] ]</td>
+</tr>
+<tr>
+<td>rank</td>
+<td>积分排行</td>
+</tr>
+</tbody>
+</table>
+<p>返回码说明</p>
+<table>
+<thead>
+<tr>
+<th>返回码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href=".." class="btn btn-neutral" title="项目概况"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

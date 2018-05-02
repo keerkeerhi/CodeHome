@@ -1,6 +1,8 @@
 //logs.js
 const util = require('../../utils/util.js')
 
+const loginsev = require('../../service/loginsev.js')
+
 Page({
   data: {
     logs: []

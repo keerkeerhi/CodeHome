@@ -1,0 +1,4 @@
+[config]
+AppID = wxfb13561442193bff
+AppSecret = 66fc642d7d4c5fe58ef2cab8e4a5546b
+grant_type = authorization_code

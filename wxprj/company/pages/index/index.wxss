@@ -35,3 +35,9 @@
 .usermotto>button:active{
   background: #1AA4EC;
 }
+
+.accredit{
+  margin-top: 15vh;
+  background: #5EA12D;
+  color: #fff;
+}

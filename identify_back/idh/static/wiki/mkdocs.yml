@@ -1,0 +1,5 @@
+site_name: IDH WIKI
+pages:
+    - 项目概况: index.md
+    - 接口说明: 接口说明.md
+theme: readthedocs

@@ -1,16 +1,19 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <block>
+    <block wx:if="{{hasUserInfo}}" >
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+    <button wx:else class="accredit"  open-type="getUserInfo" bindgetuserinfo="accredit">
+        确认授权
+    </button>
   </view>
   <view>
     <image mode='aspectFit' src='{{imgSrc}}' />
   </view>
   <view class="usermotto">
-    <button bindtap='chooseImg'>
+    <button disabled='{{!hasUserInfo}}' bindtap='chooseImg'>
       上传并识别图片
     </button>
   </view>
