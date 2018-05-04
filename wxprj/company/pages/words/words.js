@@ -1,18 +1,43 @@
 // pages/words/words.js
+const bussev = require('../../service/bussev.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    resList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let {openid,img} = JSON.parse(options.info)
+    console.log('params==>', openid,img)
+    wx.showLoading({
+      title: '识别中',
+    })
+
+    bussev.upload_img(img, openid).then(res => {
+      let ds = JSON.parse(res.data)
+      wx.hideLoading()
+      if (ds.words_result.length > 0) {
+        this.setData({ resList: ds.words_result})
+      }
+      else
+      {
+        wx.navigateBack({
+          delta: 1
+        })
+      }
+    }, rej => {
+      console.log(rej)
+      wx.showToast({
+        title: "服务器超时",
+        icon: "none"
+      })
+    })
   },
 
   /**

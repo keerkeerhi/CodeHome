@@ -1,17 +1,17 @@
 //logs.js
 const util = require('../../utils/util.js')
-
+const app = getApp()
 const loginsev = require('../../service/loginsev.js')
 
 Page({
   data: {
-    logs: []
+    content:''
   },
   onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+    let openid = app.globalData.openid
+    loginsev.result_list({openid}).then(res=>{
+      console.log('---res=>',res)
+      this.setData({content:res.data.content})
     })
   }
 })

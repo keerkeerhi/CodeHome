@@ -1,1 +1,13 @@
 /* pages/words/words.wxss */
+
+.wordContent{
+  
+}
+
+.pageContent{
+  margin: 5vh 5vw;
+}
+.pageContent>text{
+  display: block;
+  color: #542B99;
+}

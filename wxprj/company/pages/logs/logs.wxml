@@ -1,4 +1,5 @@
 <!--logs.wxml-->
-<view class="container">
-  <text>111</text>
+<view class="log-content">
+  <view>只显示最后一条哦！</view>
+  <text >{{content}}</text>
 </view>

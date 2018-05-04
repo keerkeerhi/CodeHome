@@ -1,2 +1,10 @@
 <!--pages/words/words.wxml-->
-<text>pages/words/words.wxml</text>
+<view class='wordContent'>
+  <scroll-view scroll-y style="height: 200px;" 
+  bindscrolltoupper="upper" bindscrolltolower="lower" 
+  bindscroll="scroll" >
+    <view class='pageContent'>
+      <text wx:for="{{resList}}" >{{item.words}}</text>
+    </view>
+  </scroll-view>
+</view>

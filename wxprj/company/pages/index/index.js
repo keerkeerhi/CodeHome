@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const bussev = require('../../service/bussev.js')
 const loginsev = require('../../service/loginsev.js')
 
 Page({
@@ -10,7 +9,8 @@ Page({
     userInfo: null,
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    imgSrc:""
+    imgSrc:"",
+    openid:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -59,13 +59,19 @@ Page({
     wx.login({success: res => {
       let { nickName, country } = this.data.userInfo
       loginsev.login({code:res.code,nickName,country}).then(res=>{
-        console.log('====>>resback',res)
+        let oid = res.data.openid
+        app.globalData.openid = oid
+        this.setData({ openid: oid})
       })
     }})
   },
   uploadImg(img){
-    console.log('----upload=>',img)
-    bussev.upload_img(img,this.openid)
+    if (!img)
+      return
+    let params = {openid:this.data.openid,img}
+    wx.navigateTo({
+      url: '/pages/words/words?info=' + JSON.stringify(params)
+    })
   },
   chooseImg(){
     let _this = this;
@@ -80,6 +86,9 @@ Page({
               sizeType: ['original'],
               sourceType: ['camera'],
               success: function (res) {
+                wx.showLoading({
+                  title: 'Loading...',
+                })
                 let imgSrc = res.tempFilePaths[0];
                 _this.setData({ imgSrc });
                 _this.uploadImg(imgSrc)
@@ -92,6 +101,9 @@ Page({
               count,
               sizeType: ['original'],
               success: function (res) {
+                wx.showLoading({
+                  title: 'Loading...',
+                })
                 let imgSrc = res.tempFilePaths[0];
                 _this.setData({ imgSrc });
                 _this.uploadImg(imgSrc)

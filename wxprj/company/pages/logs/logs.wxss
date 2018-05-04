@@ -1,5 +1,9 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.log-content {
+  margin-top: 3vh;
+  padding: 0 3vw;
+}
+.log-content>view{
+  text-align: center;
+  color: #ccc;
+  font-size: 18px;
 }

@@ -1,5 +1,6 @@
 import {base_url} from './baseconfig.js'
-const upload_img = base_url + 'api/upload_img/';
+const upload_img = base_url + 'api/upload/';
+const login_ses = base_url + 'api/login_ses/';
 
 module.exports = {
   upload_img(img,openid){
@@ -10,13 +11,10 @@ module.exports = {
         name: 'image',
         formData: {openid},
         success: function (result) {
-          
+          resolve(result)
         },
         fail(e) {
-          wx.showToast({
-            title: "服务器超时",
-            icon: "none"
-          })
+          reject()
         }
       })
     })

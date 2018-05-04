@@ -1,6 +1,8 @@
 from json_response import JsonResponse
 from aip import AipOcr
+from .models import *
 import os
+import sys
 import time
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -16,7 +18,7 @@ SECRET_KEY = 'fB2MNz1c2UHLTximFlC4laXPg7CVfyjV'
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 def upload_img(request):
-
+    openid = request.POST.get('openid')
     img = request.FILES.get('image')
     if not all([img]):
         return JsonResponse({
@@ -45,8 +47,22 @@ def upload_img(request):
 
     # 调用通用文字识别接口
     result = aipOcr.basicGeneral(get_file_content(abs_path), options)
+    cs = result['words_result']
+    for c in cs:
+        cw = str(c['words'])
+        if len(cw)>1000:
+            cw = cw[0:1000]
+        ImgRecord.objects.create(openId=openid,content=cw)
     # print(json.dumps(result).decode("unicode-escape"))
     return JsonResponse(result)
+
+def result_list(request):
+    openid = request.GET.get('openid')
+    rs = ImgRecord.objects.filter(openId=openid)
+    rd = ''
+    if rs.exists():
+        rd = rs[len(rs)-1].content
+    return JsonResponse({'content':rd})
 
 def get_file_content(filePath):
     with open(filePath, 'rb') as fp:
