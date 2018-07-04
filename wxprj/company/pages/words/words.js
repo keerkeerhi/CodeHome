@@ -13,6 +13,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (!options.info)
+      return
     let {openid,img} = JSON.parse(options.info)
     console.log('params==>', openid,img)
     wx.showLoading({
@@ -39,7 +41,20 @@ Page({
       })
     })
   },
-
+  copyWords(){
+    let words = ''
+    this.data.resList.forEach(it=>{
+      words = words + it.words +'\r'
+    })
+    wx.setClipboardData({
+      data: words,
+      success: function (res) {
+        wx.showToast({
+          title: '复制成功',
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

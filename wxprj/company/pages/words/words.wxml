@@ -1,10 +1,9 @@
 <!--pages/words/words.wxml-->
 <view class='wordContent'>
-  <scroll-view scroll-y style="height: 200px;" 
-  bindscrolltoupper="upper" bindscrolltolower="lower" 
-  bindscroll="scroll" >
+  <scroll-view scroll-y style="height: 80vh;"  >
     <view class='pageContent'>
       <text wx:for="{{resList}}" >{{item.words}}</text>
     </view>
   </scroll-view>
+  <button class='copyBtn' disabled='{{resList.length==0}}' bindtap='copyWords'>copy</button>
 </view>

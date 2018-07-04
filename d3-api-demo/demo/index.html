@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="mycanv" onclick="alert('1')" ></canvas>
+    <script>
+        let cnv =  document.getElementById('mycanv')
+        let cnx = cnv.getContext('2d');
+        cnx.fillStyle = 'red'
+        cnx.fillRect(0,0,100,100)
+    </script>
+</body>
+</html>

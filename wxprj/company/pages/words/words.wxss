@@ -1,7 +1,12 @@
 /* pages/words/words.wxss */
 
 .wordContent{
-  
+  background: #FDF2D4;
+  height: 100vh;
+}
+
+.scroll-view{
+  background: #DEE9C7;
 }
 
 .pageContent{
@@ -10,4 +15,11 @@
 .pageContent>text{
   display: block;
   color: #542B99;
+}
+
+.copyBtn{
+  margin-top: 10vh;
+  background: #00FF34;
+  width: 80vw;
+  color: #fff;
 }
